@@ -104,7 +104,7 @@ impl<'a> NodeCmd<'a> {
         extra_args.push(node_dir.as_ref());
 
         if !contacts.is_empty() {
-            extra_args.push("--hard-coded-contacts");
+            extra_args.push("--bootstrap-nodes");
             extra_args.push(
                 serde_json::to_string(
                     &contacts
